@@ -1,0 +1,37 @@
+//	JSON Data
+
+var qaList = 
+
+	{"QnA": {
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+			},
+		
+	};
+	
+
+var classesSection = Ti.UI.createTableViewSection ({
+	headerTitle: "World of Warcraft Classes",
+//	footerTitle: "",
+});
+
+for (var i=0, j=qaList.qna.length; i<j; i++) {
+	var classesRow = Ti.UI.createTableViewRow({
+		question: qaList.qna[i].question,
+		answer:  qaList.qna[i].answer,
+		//leftImage: jsonList.classes[i].icon,
+		hasChild: true
+	});
+	
+	classesSection.add(classesRow);
+	classesRow.addEventListener("click", myDetails);
+}

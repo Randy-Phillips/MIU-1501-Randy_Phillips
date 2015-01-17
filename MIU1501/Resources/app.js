@@ -16,10 +16,15 @@ var winLab = Titanium.UI.createLabel({
 	width:'auto'
 });
 
-//	Load JSON file
-var loadFile = require('content');
+var myNav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
 
+//	Load JSON file
+var loadFile = require('json');
 
 
 mainWin.add(winLab);
-mainWin.open();
+myNav.open();
+
+

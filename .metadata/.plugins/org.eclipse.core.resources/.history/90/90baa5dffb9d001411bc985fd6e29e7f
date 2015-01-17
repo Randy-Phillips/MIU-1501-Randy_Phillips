@@ -1,0 +1,122 @@
+//	JSON Data
+
+var qaList = 
+
+	{"QnA": 
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+		{question: "q 1" , answer:"answer one"},
+			,
+		
+	};
+
+
+// My Question Page
+var myDetails = function(){
+	
+
+	var detailWindow = Ti.UI.createWindow({
+		title: this.title,
+		backgroundColor: "f5f5f5"
+		
+	});
+	
+	var newNav = Ti.UI.iOS.createNavigationWindow({
+		window: detailWindow
+	});
+	
+	var detailLabel = Titanium.UI.createLabel({
+		color:"525252",
+		text:this.title,
+		font:{fontSize:20,fontFamily:"Helvetica Neue"},
+		textAlign: "center",
+		width: "auto"
+	});
+	
+	var detailTopName = Ti.UI.createView ({
+		backgroundColor: "#C4C4C4",
+		top: 2});
+	
+	var detailView = Ti.UI.createView ({
+		backgroundColor: "E3E6E4",
+		top: 20,
+		right: 10,
+		left: 10,
+		bottom: 10,
+		zIndex: 1
+});
+
+var detailText = Ti.UI.createLabel({
+	text: this.desc,
+	font:{fontSize:16,fontFamily:"Arial"},
+	top: detailTopName.height + detailTopName.top + 40,	
+	left: 10,
+	right: 10,
+	zIndex: 10
+});	
+
+var specText = Ti.UI.createLabel({
+	text: this.specs,
+	font:{fontSize:16,fontFamily:"Arial"},
+	top: detailText.top + 170,
+	left: 10,
+	right: 10,
+	zIndex: 10
+});	
+
+var closeButton = Ti.UI.createLabel({
+	text: "Go Back",
+	backgroundColor: "#333",
+	color: "#fff",
+	height: 50,
+	font:{fontSize:12,fontFamily:"Arial"},
+	width: "100%",
+	bottom: 0,
+	textAlign: "center",
+	zIndex: 8
+});
+
+var closeWindow = function() {
+	detailWindow.close();
+};
+
+
+closeButton.addEventListener("click", closeWindow);
+
+detailTopName.add(detailLabel);
+detailWindow.add(detailView,detailTopName,detailText,specText, closeButton);
+
+myNav.openWindow(detailWindow);
+
+};
+
+
+
+	
+
+
+
+var classesSection = Ti.UI.createTableViewSection ({
+	headerTitle: "World of Warcraft Classes",
+//	footerTitle: "",
+});
+
+for (var i=0, j=qaList.qna.length; i<j; i++) {
+	var classesRow = Ti.UI.createTableViewRow({
+		question: qaList.qna[i].question,
+		answer:  qaList.qna[i].answer,
+		//leftImage: jsonList.classes[i].icon,
+		hasChild: true
+	});
+	
+	classesSection.add(classesRow);
+	classesRow.addEventListener("click", myDetails);
+}
