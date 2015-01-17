@@ -6,17 +6,17 @@ var currentWindow = Ti.UI.currentWindow;
 var qaList = 
 
 	{"qna":  [
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
-		{question: "q 1" , answer:"answer one"},
+		{question: "What is my name?" , answer:"My name is Randy Phillips!!"},
+		{question: "What is my chat user name, including the host?" , answer:"I am assuming this question is in regards to what alias I go by online and that would be Attackruby. I have used it since probably 2003ish when I started playing video games and have not changed it!"},
+		{question: "What Time Zone do I Reside?" , answer:"EST. I am currently from Ohio where it's cold! I wish I could be on campus right now enjoying the weather. :)"},
+		{question: "Why am I in the Mobile Development Program?" , answer:"Because I love mobile! I took the class originally just to get myself into programming. I have/had more desire programming application for the windows platform but in general I just greatly enjoy programming."},
+		{question: "How comfortable am I with javascript?" , answer:"I feel decently comforable. I love mathmatics so the logical part of programming is fun for me."},
+		{question: "How comfortable am I with Titanium?" , answer:"About the same as Javascript. I feel that I have a good understanding of the basics and feel comfortable with Titanium."},
+		{question: "What is my favorite Color?" , answer:"My favorite color would have to be red. Especially ruby red."},
+		{question: "What is my favorite Sport?" , answer:"NONE! hahaha. I am not really a sports fan but I do enjoy watching a game of football here and there. My girlfriend loves the fact that I do not follow sports.... she wishes I was like that with video games too. :P"},
+		{question: "What are my Hobbbies?" , answer:"Video Games, Movies, and programming. I live in the pittsburgh area and me and a friend likes to find coding meetups to learn more about other programming languages and frameworks."},
+		{question: "What is my favorite TV Show?" , answer:"The Big Bang Theory!"},
+		{question: "What is my favorite movie?" , answer:"I enjoyed watching the Lord of the Rings and The Hobbit movies."},
 			]
 		
 	};
